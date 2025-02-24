@@ -53,6 +53,8 @@ export class CategoriesService {
       categoryNames,
     );
 
+    // dummy send recommendation email
+    await this.mailerService.sendWeeklyRecommendations();
     return { message: 'Subscription successful', categories: categoryNames };
   }
 
